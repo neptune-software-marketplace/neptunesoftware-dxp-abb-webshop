@@ -1,0 +1,1093 @@
+{
+	"id": "962bca81-b009-ed11-b47a-000d3ab2359f",
+	"createdAt": "2022-07-22T11:22:11.490Z",
+	"updatedAt": "2022-07-25T08:37:25.806Z",
+	"createdBy": "lloyd.trevarthen@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "a898f320-322b-43f5-a8db-dd05fb189ef4",
+			"fieldName": "ActionButton",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Button",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "width",
+					"grouping": "Properties",
+					"value": "80px",
+					"script": "",
+					"translation": []
+				},
+				{
+					"attribute": "type",
+					"grouping": "Properties",
+					"value": "Emphasized",
+					"script": "",
+					"translation": []
+				},
+				{
+					"attribute": "text",
+					"grouping": "Properties",
+					"value": "BUY",
+					"script": "",
+					"translation": []
+				},
+				{
+					"attribute": "press",
+					"grouping": "Events",
+					"value": "Anonymous Function",
+					"script": [
+						"==OBJECT STRING==",
+						"var productid = this.getFieldGroupIds(); //bind your product ID to your FieldGroupId's",
+						"",
+						"var datacart = ModelData.Find(oProductCart, \"productid\", productid[0], \"EQ\");",
+						"if (datacart.length === 0) {",
+						"    var data = ModelData.Find(ListProduct, \"productid\", productid[0], \"EQ\");",
+						"    ModelData.Add(oProductCart, data[0]);",
+						"    setCacheoProductCart();",
+						"}",
+						"oButtonCart.setText(modeloProductCart.oData.length);",
+						"",
+						"",
+						"",
+						"",
+						""
+					],
+					"translation": []
+				},
+				{
+					"attribute": "fieldGroupIds",
+					"grouping": "Properties",
+					"value": "{productid}",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": []
+		},
+		{
+			"fieldNo": "11d88aeb-30bb-4385-91be-432bbff5af1c",
+			"fieldName": "oButtonCart",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Button",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "icon",
+					"grouping": "Properties",
+					"value": "sap-icon://fa-solid/shopping-cart",
+					"script": "",
+					"translation": []
+				},
+				{
+					"attribute": "press",
+					"grouping": "Events",
+					"value": "oApp.to(oPageCart);",
+					"script": "oApp.to(oPageCart);",
+					"translation": []
+				}
+			],
+			"data": []
+		},
+		{
+			"fieldNo": "b97b161b-2b9c-4794-8edd-46723c642ac6",
+			"fieldName": "oPageCart",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Page",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [
+				{
+					"attribute": "enableScrolling",
+					"grouping": "Properties",
+					"value": "false",
+					"script": "",
+					"translation": []
+				}
+			],
+			"data": [
+				{
+					"fieldNo": "ba2f1715-9498-4b32-cdf1-f2efab8a363c",
+					"fieldName": "oBarCustomHeadercart",
+					"fieldParent": "b97b161b-2b9c-4794-8edd-46723c642ac6",
+					"fieldType": "sap.m.Bar",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "position",
+							"grouping": "Parent",
+							"value": "setCustomHeader",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "df4e7e4c-40a6-4bd0-e214-76be9adc399b",
+							"fieldName": "Middle",
+							"fieldParent": "ba2f1715-9498-4b32-cdf1-f2efab8a363c",
+							"fieldType": "neptune.BarContent",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "position",
+									"grouping": "Parent",
+									"value": "ContentMiddle",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "211e9f07-b094-4634-ac60-7efc4b2a574c",
+									"fieldName": "oIconCart",
+									"fieldParent": "df4e7e4c-40a6-4bd0-e214-76be9adc399b",
+									"fieldType": "sap.ui.core.Icon",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "src",
+											"grouping": "Properties",
+											"value": "sap-icon://fa-solid/shopping-cart",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "26addc51-3e52-46a6-9b09-7aa0dab0afaa",
+									"fieldName": "oTextcartitle",
+									"fieldParent": "df4e7e4c-40a6-4bd0-e214-76be9adc399b",
+									"fieldType": "sap.m.Text",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Check Out",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"fieldNo": "cad670f3-36bd-4e6f-8b68-b84247ebdf37",
+					"fieldName": "oScrollContainer1",
+					"fieldParent": "b97b161b-2b9c-4794-8edd-46723c642ac6",
+					"fieldType": "sap.m.ScrollContainer",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [
+						{
+							"attribute": "vertical",
+							"grouping": "Properties",
+							"value": "true",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "horizontal",
+							"grouping": "Properties",
+							"value": "false",
+							"script": "",
+							"translation": []
+						},
+						{
+							"attribute": "height",
+							"grouping": "Properties",
+							"value": "100%",
+							"script": "",
+							"translation": []
+						}
+					],
+					"data": [
+						{
+							"fieldNo": "d67204d9-17a0-4efe-b047-dd4cdfabefb1",
+							"fieldName": "oProductCart",
+							"fieldParent": "cad670f3-36bd-4e6f-8b68-b84247ebdf37",
+							"fieldType": "sap.m.Table",
+							"script": "",
+							"bindingValue": "Products_3d>products_3d",
+							"bindingType": "h",
+							"bindingSource": "API",
+							"bindingParentID": "64D8EB4F-9886-EB11-85AA-0003FF1E43FB",
+							"bindingPathID": "74cab67f-c7ac-47ee-8b70-927dbf9a0cb1",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "noDataText",
+									"grouping": "Properties",
+									"value": "Scan or Search for Products",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "mode",
+									"grouping": "Properties",
+									"value": "Delete",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setInitLoad",
+									"grouping": "Model",
+									"value": "cache",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setEnableCache",
+									"grouping": "Model",
+									"value": "true",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "setCacheType",
+									"grouping": "Model",
+									"value": "IndexedDB",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "delete",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"// Delete item in list",
+										"// Replace FIELD with your field",
+										"var deleteItem = oEvent.getParameter(\"listItem\");",
+										"var context = deleteItem.getBindingContext();",
+										"",
+										"var value = context.getProperty(\"id\");",
+										"",
+										"ModelData.Delete(oProductList, \"id\", value, \"EQ\");",
+										"setCacheoProductList();",
+										"caltotal();"
+									],
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "b4540dad-30b2-4b78-8189-07b09bb8730f",
+									"fieldName": "collistProductIMAGE",
+									"fieldParent": "d67204d9-17a0-4efe-b047-dd4cdfabefb1",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "150px",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "hAlign",
+											"grouping": "Properties",
+											"value": "Center",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "0d5a54b3-a894-4fb9-da56-2504d1d74a07",
+									"fieldName": "collistProductGROUP",
+									"fieldParent": "d67204d9-17a0-4efe-b047-dd4cdfabefb1",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "popinDisplay",
+											"grouping": "Properties",
+											"value": "Inline",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "minScreenWidth",
+											"grouping": "Properties",
+											"value": "Tablet",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "demandPopin",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "a7895e82-7a73-491b-99bf-8832bce8a4cc",
+									"fieldName": "collistProductQUANT",
+									"fieldParent": "d67204d9-17a0-4efe-b047-dd4cdfabefb1",
+									"fieldType": "sap.m.Column",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "width",
+											"grouping": "Properties",
+											"value": "250px",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "popinDisplay",
+											"grouping": "Properties",
+											"value": "Inline",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "minScreenWidth",
+											"grouping": "Properties",
+											"value": "Large",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "hAlign",
+											"grouping": "Properties",
+											"value": "End",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "demandPopin",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "0958198a-aaed-4ecd-da22-58456f38aace",
+									"fieldName": "colItemlistProduct",
+									"fieldParent": "d67204d9-17a0-4efe-b047-dd4cdfabefb1",
+									"fieldType": "sap.m.ColumnListItem",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "visible",
+											"grouping": "Properties",
+											"value": true,
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"var context = oEvent.oSource.getBindingContext();",
+												"var value = context.getProperty(\"MATNR\");",
+												"modeloPageProductDetail.setData(context.getObject());",
+												"getOnlineProductDetail(value);",
+												"",
+												""
+											],
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "9fce2da4-f31d-4a4a-8e24-770c2876a162",
+											"fieldName": "oHBoxProduct",
+											"fieldParent": "0958198a-aaed-4ecd-da22-58456f38aace",
+											"fieldType": "sap.m.HBox",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": [
+												{
+													"fieldNo": "8fb14c12-cae1-4279-b480-e70ef32880aa",
+													"fieldName": "txtlistProductIMAGECart",
+													"fieldParent": "9fce2da4-f31d-4a4a-8e24-770c2876a162",
+													"fieldType": "sap.m.Image",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "width",
+															"grouping": "Properties",
+															"value": "130px",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": true,
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "src",
+															"grouping": "Properties",
+															"value": "{image}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "densityAware",
+															"grouping": "Properties",
+															"value": true,
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "decorative",
+															"grouping": "Properties",
+															"value": true,
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"oImageZoom.setSrc(this.getSrc());",
+																"oDialogImageZoom.open();"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "9e4db102-79cd-47cf-c264-fc51e6f5d593",
+											"fieldName": "boxProductInfo",
+											"fieldParent": "0958198a-aaed-4ecd-da22-58456f38aace",
+											"fieldType": "sap.m.VBox",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": true,
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "beaa8f85-f6fb-42d3-ea49-7e385cbf55fc",
+													"fieldName": "txtlistProductMATNRCart",
+													"fieldParent": "9e4db102-79cd-47cf-c264-fc51e6f5d593",
+													"fieldType": "sap.m.ObjectAttribute",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": true,
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "title",
+															"grouping": "Properties",
+															"value": "{productid}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{description}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "22a9abdd-675d-4e7e-e375-011505e2d6b0",
+											"fieldName": "boxProductBuyCart",
+											"fieldParent": "0958198a-aaed-4ecd-da22-58456f38aace",
+											"fieldType": "sap.m.VBox",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "visible",
+													"grouping": "Properties",
+													"value": true,
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "811c9747-6f33-4d68-b96b-571d72b215ae",
+													"fieldName": "boxProductBuySpacer1",
+													"fieldParent": "22a9abdd-675d-4e7e-e375-011505e2d6b0",
+													"fieldType": "sap.m.VBox",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": true,
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "height",
+															"grouping": "Properties",
+															"value": "20px",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+													"fieldName": "boxProductBuyActionsCart",
+													"fieldParent": "22a9abdd-675d-4e7e-e375-011505e2d6b0",
+													"fieldType": "sap.m.HBox",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": true,
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "justifyContent",
+															"grouping": "Properties",
+															"value": "End",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "d899e192-094b-472d-86e0-b45a5fae0ece",
+															"fieldName": "butBuyLessCart",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.Button",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "iconFirst",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "iconDensityAware",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "icon",
+																	"grouping": "Properties",
+																	"value": "sap-icon://less",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "enabled",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"var context = oEvent.oSource.getBindingContext();",
+																		"var data = context.getObject();",
+																		"//Add your data filed here ",
+																		"//Replace your Order Field that is binded to inlistProductQUANT",
+																		"if (data.TotalQuantity === 1) {",
+																		"    return;",
+																		"}",
+																		"data.TotalQuantity--;",
+																		"",
+																		"//Amount = Ordered Quantity * Product Unit Price",
+																		"data.TotalPrice = data.TotalQuantity * data.Price;",
+																		"",
+																		"//Refresh model from Binding",
+																		"modeloProductList.refresh();",
+																		"",
+																		"",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "5429742d-4570-4767-d0f6-607409ccc1d3",
+															"fieldName": "boxSpacer6",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.HBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "20px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "3ecc8495-766d-4e4d-882e-6291fb84121f",
+															"fieldName": "inlistProductQUANTCart",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.Input",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "50px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "value",
+																	"grouping": "Properties",
+																	"value": "1",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "type",
+																	"grouping": "Properties",
+																	"value": "Tel",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "textAlign",
+																	"grouping": "Properties",
+																	"value": "Center",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "styleClassMargin",
+																	"grouping": "Properties",
+																	"value": "sapUiSmallMarginBeginEnd",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "showValueStateMessage",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "showTableSuggestionValueHelp",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "filterSuggests",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "enabled",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "editable",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "f0dbb6d0-dd1a-483f-a1bb-8ccd039790b0",
+															"fieldName": "boxSpacer7",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.HBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "20px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "f3bec915-414e-405f-92ff-6899add4b2f4",
+															"fieldName": "butBuyMoreCart",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.Button",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "iconFirst",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "iconDensityAware",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "icon",
+																	"grouping": "Properties",
+																	"value": "sap-icon://add",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "enabled",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "press",
+																	"grouping": "Events",
+																	"value": "Anonymous Function",
+																	"script": [
+																		"==OBJECT STRING==",
+																		"var context = oEvent.oSource.getBindingContext();",
+																		"var data = context.getObject();",
+																		"data.TotalQuantity++; //Add your data filed here ",
+																		"//Calculate the total cost ",
+																		"//Amount = Ordered Quantity * Product Unit Price",
+																		"data.TotalPrice = data.TotalQuantity * data.Price;",
+																		"//Refresh UI from Model",
+																		"modeloProductList.refresh();",
+																		"",
+																		"",
+																		""
+																	],
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "fc1e09e8-510e-4659-f285-7560a1259458",
+															"fieldName": "boxSpacer4Cart",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.HBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "20px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "5065a192-75d8-4120-c0fc-7787d529769d",
+															"fieldName": "boxSpacer555",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.HBox",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "20px",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": true,
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "f9b7b1a9-8058-4308-9c44-336dd90f5923",
+															"fieldName": "oPriceAmount",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.Title",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "titleStyle",
+																	"grouping": "Properties",
+																	"value": "H1",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "textAlign",
+																	"grouping": "Properties",
+																	"value": "Right",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{price}",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "styleClassMargin",
+																	"grouping": "Properties",
+																	"value": "sapUiMediumMarginBegin",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														},
+														{
+															"fieldNo": "b947ef7b-f359-4587-e7c7-d7643dc9e153",
+															"fieldName": "oCurrency",
+															"fieldParent": "861944a6-4fb9-47db-cdfd-b7d949da9530",
+															"fieldType": "sap.m.Label",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "text",
+																	"grouping": "Properties",
+																	"value": "{currency}",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": []
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.7.25.1037",
+	"application": "neptbb_shoppingcart",
+	"title": "Webshop",
+	"description": "Shopping Cart",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}

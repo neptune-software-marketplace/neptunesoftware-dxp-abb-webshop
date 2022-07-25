@@ -1,0 +1,462 @@
+{
+	"id": "0ee28834-6c89-411b-9570-1c088feac255",
+	"createdAt": "2022-02-04T15:46:58.650Z",
+	"updatedAt": "2022-07-25T08:36:39.706Z",
+	"createdBy": "luuk.wosten@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "a80ab7d2-ffa7-4076-ac4a-d271941444bd",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "4209b33e-b397-45c0-9b77-98f3760e7f92",
+					"fieldName": "oApp",
+					"fieldParent": "a80ab7d2-ffa7-4076-ac4a-d271941444bd",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "8b9fdebf-0c62-4949-f017-38946cee5453",
+							"fieldName": "oPageList",
+							"fieldParent": "4209b33e-b397-45c0-9b77-98f3760e7f92",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "67504397-b9a5-470b-dfb7-1803e83adc32",
+									"fieldName": "oBarCustomHeader",
+									"fieldParent": "8b9fdebf-0c62-4949-f017-38946cee5453",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "461b78df-26ea-4909-b474-3b28fce61694",
+											"fieldName": "Left",
+											"fieldParent": "67504397-b9a5-470b-dfb7-1803e83adc32",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "9434405e-d748-4d65-9fb0-3691075cff1e",
+											"fieldName": "Middle",
+											"fieldParent": "67504397-b9a5-470b-dfb7-1803e83adc32",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "28f50ccd-681b-4d6f-c828-6fa67260e045",
+													"fieldName": "oTitle",
+													"fieldParent": "9434405e-d748-4d65-9fb0-3691075cff1e",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "App Title Here",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "3cc491b0-abb6-4be5-ef06-724fb10c1e1c",
+											"fieldName": "Right",
+											"fieldParent": "67504397-b9a5-470b-dfb7-1803e83adc32",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "46c8fdd6-6c4f-4104-aade-9efc585b64d4",
+													"fieldName": "oBtnSearch",
+													"fieldParent": "3cc491b0-abb6-4be5-ef06-724fb10c1e1c",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://search",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "oDialogSearch.open();",
+															"script": "oDialogSearch.open();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "150581c4-9437-411b-c721-9fce9f8741c2",
+									"fieldName": "oBarCustomFooter",
+									"fieldParent": "8b9fdebf-0c62-4949-f017-38946cee5453",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "cfdccfb0-ed11-487f-c172-c855011300f6",
+											"fieldName": "Left",
+											"fieldParent": "150581c4-9437-411b-c721-9fce9f8741c2",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "db2a5d15-ee7b-40f4-d2ac-643ff137ce54",
+													"fieldName": "oBtnAddProducts",
+													"fieldParent": "cfdccfb0-ed11-487f-c172-c855011300f6",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Add to Basket",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://cart-4",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "c922e506-c39b-42bd-91d2-5f9f62a4e53e",
+											"fieldName": "Middle",
+											"fieldParent": "150581c4-9437-411b-c721-9fce9f8741c2",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "7b6c1e10-36e7-429b-8ccd-c4b2d0b54e57",
+													"fieldName": "oBtnScan",
+													"fieldParent": "c922e506-c39b-42bd-91d2-5f9f62a4e53e",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://fa-solid/barcode",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"//Script",
+																"cordova.plugins.barcodeScanner.scan(",
+																"",
+																"    // success callback function",
+																"    function(result) {",
+																"        // wrapping in a timeout so the dialog doesn't free the app",
+																"        setTimeout(function() {",
+																"            //EXAMPLE FIELDS EAN & ARTID",
+																"            // var data = ModelData.Find(oProductListSearch, \"EAN\", result.text, \"Contains\");",
+																"            // if (data != undefined) {",
+																"            //     ModelData.Update(oProductList, \"ArtId\", data[0].ArtId, data[0], \"EQ\");",
+																"            // } else {",
+																"            //     // Use MessageToast",
+																"            //     sap.m.MessageToast.show(\"The scanned product is not found\");",
+																"            // }",
+																"        }, 0);",
+																"    },",
+																"",
+																"    // error callback function",
+																"    function(error) {",
+																"        alert(\"Scanning failed: \" + error);",
+																"    },",
+																"",
+																"    // options object",
+																"    {",
+																"        \"preferFrontCamera\": false,",
+																"        \"showFlipCameraButton\": true,",
+																"        \"orientation\": \"landscape\"",
+																"    }",
+																");"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "fcee24e1-31a4-4fa1-f95b-3e2d4e828f04",
+											"fieldName": "Right",
+											"fieldParent": "150581c4-9437-411b-c721-9fce9f8741c2",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "b736495e-3d41-4ae1-be49-006c9cc9e4f3",
+													"fieldName": "oBtnStore",
+													"fieldParent": "fcee24e1-31a4-4fa1-f95b-3e2d4e828f04",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "1",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://cart-full",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "a9beade5-0a6f-4d46-e564-434ffac5a3b4",
+													"fieldName": "oBtnStoreEmpty",
+													"fieldParent": "fcee24e1-31a4-4fa1-f95b-3e2d4e828f04",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "0",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://cart",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "4014aa30-99b3-4faf-849d-62d4afca3315",
+					"fieldName": "functions",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"function calc_total() {",
+						"    var total = 0;",
+						"    for (var i = 0; i < modeloProductList.oData.length; i++) {",
+						"        modeloProductList.oData[i].Amount = modeloProductList.oData[i].Order * modeloProductList.oData[i].SalesPrice; ",
+						"        total += modeloProductList.oData[i].Amount;",
+						"    }",
+						"    return total;",
+						"}"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.7.25.1036",
+	"application": "webshop_list_page",
+	"title": "WEBSHOP",
+	"description": "Product Page - Checkout / Product Search",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "1.71",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}

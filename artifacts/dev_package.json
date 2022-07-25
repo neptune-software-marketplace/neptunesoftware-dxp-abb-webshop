@@ -1,0 +1,61 @@
+{
+	"id": "623A7FCD-F40B-ED11-B47A-000D3AB2359F",
+	"createdAt": "2022-07-25T08:35:57.603Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-webshop",
+		"testServers": []
+	},
+	"name": "neptunesoftware-dxp-abb-webshop",
+	"description": null,
+	"ver": "22.7.25.840",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "962BCA81-B009-ED11-B47A-000D3AB2359F",
+			"ver": "22.7.25.1037",
+			"application": "neptbb_shoppingcart",
+			"title": "Webshop",
+			"description": "Shopping Cart"
+		},
+		{
+			"id": "0EE28834-6C89-411B-9570-1C088FEAC255",
+			"ver": "22.7.25.1036",
+			"application": "webshop_list_page",
+			"title": "WEBSHOP",
+			"description": "Product Page - Checkout / Product Search"
+		},
+		{
+			"id": "A5E9EDA5-99E3-4EBD-8076-8DD944CE4070",
+			"ver": "22.7.25.1036",
+			"application": "webshop_product_list",
+			"title": "WEBSHOP",
+			"description": "Product List - Search / Scan / Add Quantity "
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}
